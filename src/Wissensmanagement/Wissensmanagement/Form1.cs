@@ -21,35 +21,9 @@ namespace Wissensmanagement
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void create_project_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
+            string projektname = projektname_tb.Text;
         }
     }
 }

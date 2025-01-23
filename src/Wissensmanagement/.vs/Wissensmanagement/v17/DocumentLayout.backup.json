@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\domin\\source\\repos\\Wissensmanagement\\",
+  "WorkspaceRootPath": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|c:\\users\\domin\\source\\repos\\wissensmanagement\\wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|c:\\users\\domin\\repos\\wissensmanagement\\src\\wissensmanagement\\wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|solutionrelative:wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|c:\\users\\domin\\source\\repos\\wissensmanagement\\wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|solutionrelative:wissensmanagement\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\wissensmanagement\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{412DDA65-6960-494D-8EE0-4548BA0210B5}|Wissensmanagement\\Wissensmanagement.csproj|solutionrelative:wissensmanagement\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +22,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Wissensmanagement\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.Designer.cs",
+              "RelativeToolTip": "Wissensmanagement\\Form1.Designer.cs",
+              "ViewState": "AgIAAI4BAAAAAAAAAAAIwKYBAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T12:14:54.254Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\domin\\source\\repos\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
               "RelativeDocumentMoniker": "Wissensmanagement\\Form1.cs",
-              "ToolTip": "C:\\Users\\domin\\source\\repos\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
+              "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
               "RelativeToolTip": "Wissensmanagement\\Form1.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAxwDMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T07:39:30.226Z",
               "EditorCaption": ""
@@ -37,9 +54,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\domin\\source\\repos\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.cs",
               "RelativeDocumentMoniker": "Wissensmanagement\\Form1.cs",
-              "ToolTip": "C:\\Users\\domin\\source\\repos\\Wissensmanagement\\Wissensmanagement\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.cs [Design]",
               "RelativeToolTip": "Wissensmanagement\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-20T19:18:06.871Z",

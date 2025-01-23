@@ -32,39 +32,39 @@
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Projekterstellung = new System.Windows.Forms.TabPage();
-            this.Informationserstellung = new System.Windows.Forms.TabPage();
-            this.Suche = new System.Windows.Forms.TabPage();
+            this.kernanforderung_tb = new System.Windows.Forms.TextBox();
+            this.projektleiter_tb = new System.Windows.Forms.TextBox();
+            this.kunde_tb = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.project_erstellen_btn = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.projektname_tb = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Informationserstellung = new System.Windows.Forms.TabPage();
+            this.informationen_tags_tb = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.information_dokumente_tb = new System.Windows.Forms.TextBox();
+            this.information_bilder_tb = new System.Windows.Forms.TextBox();
+            this.information_text_tb = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.information_hinzufuegen_btn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.Suche = new System.Windows.Forms.TabPage();
+            this.kommentar_hinzufuegen_btn = new System.Windows.Forms.Button();
+            this.suchen_btn = new System.Windows.Forms.Button();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.suche_kommentar_tb = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.suche_tags_tb = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Projekterstellung.SuspendLayout();
             this.Informationserstellung.SuspendLayout();
@@ -83,14 +83,10 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(28, 28);
+            this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(153, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Informationserstellung";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 33;
             // 
             // tabControl1
             // 
@@ -105,14 +101,14 @@
             // 
             // Projekterstellung
             // 
-            this.Projekterstellung.Controls.Add(this.textBox3);
-            this.Projekterstellung.Controls.Add(this.textBox2);
-            this.Projekterstellung.Controls.Add(this.textBox1);
+            this.Projekterstellung.Controls.Add(this.kernanforderung_tb);
+            this.Projekterstellung.Controls.Add(this.projektleiter_tb);
+            this.Projekterstellung.Controls.Add(this.kunde_tb);
             this.Projekterstellung.Controls.Add(this.label5);
             this.Projekterstellung.Controls.Add(this.label7);
-            this.Projekterstellung.Controls.Add(this.button2);
+            this.Projekterstellung.Controls.Add(this.project_erstellen_btn);
             this.Projekterstellung.Controls.Add(this.label8);
-            this.Projekterstellung.Controls.Add(this.textBox8);
+            this.Projekterstellung.Controls.Add(this.projektname_tb);
             this.Projekterstellung.Controls.Add(this.label10);
             this.Projekterstellung.Controls.Add(this.label9);
             this.Projekterstellung.Location = new System.Drawing.Point(4, 22);
@@ -123,16 +119,89 @@
             this.Projekterstellung.Text = "Projekterstellung";
             this.Projekterstellung.UseVisualStyleBackColor = true;
             // 
+            // kernanforderung_tb
+            // 
+            this.kernanforderung_tb.Location = new System.Drawing.Point(155, 202);
+            this.kernanforderung_tb.Name = "kernanforderung_tb";
+            this.kernanforderung_tb.Size = new System.Drawing.Size(379, 20);
+            this.kernanforderung_tb.TabIndex = 23;
+            // 
+            // projektleiter_tb
+            // 
+            this.projektleiter_tb.Location = new System.Drawing.Point(155, 164);
+            this.projektleiter_tb.Name = "projektleiter_tb";
+            this.projektleiter_tb.Size = new System.Drawing.Size(379, 20);
+            this.projektleiter_tb.TabIndex = 22;
+            // 
+            // kunde_tb
+            // 
+            this.kunde_tb.Location = new System.Drawing.Point(155, 123);
+            this.kunde_tb.Name = "kunde_tb";
+            this.kunde_tb.Size = new System.Drawing.Size(379, 20);
+            this.kunde_tb.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(45, 205);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Kernanforderung";
+            // 
+            // project_erstellen_btn
+            // 
+            this.project_erstellen_btn.Location = new System.Drawing.Point(435, 258);
+            this.project_erstellen_btn.Name = "project_erstellen_btn";
+            this.project_erstellen_btn.Size = new System.Drawing.Size(99, 44);
+            this.project_erstellen_btn.TabIndex = 24;
+            this.project_erstellen_btn.Text = "Projekt erstellen";
+            this.project_erstellen_btn.Click += new System.EventHandler(this.create_project_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(45, 165);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Projektleiter";
+            // 
+            // projektname_tb
+            // 
+            this.projektname_tb.Location = new System.Drawing.Point(155, 84);
+            this.projektname_tb.Name = "projektname_tb";
+            this.projektname_tb.Size = new System.Drawing.Size(379, 20);
+            this.projektname_tb.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(45, 87);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(66, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Projektname";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(45, 123);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Kunde";
+            // 
             // Informationserstellung
             // 
-            this.Informationserstellung.Controls.Add(this.textBox7);
+            this.Informationserstellung.Controls.Add(this.informationen_tags_tb);
             this.Informationserstellung.Controls.Add(this.label12);
-            this.Informationserstellung.Controls.Add(this.textBox6);
+            this.Informationserstellung.Controls.Add(this.information_dokumente_tb);
             this.Informationserstellung.Controls.Add(this.label6);
-            this.Informationserstellung.Controls.Add(this.textBox5);
-            this.Informationserstellung.Controls.Add(this.textBox4);
+            this.Informationserstellung.Controls.Add(this.information_bilder_tb);
+            this.Informationserstellung.Controls.Add(this.information_text_tb);
             this.Informationserstellung.Controls.Add(this.label4);
-            this.Informationserstellung.Controls.Add(this.button1);
+            this.Informationserstellung.Controls.Add(this.information_hinzufuegen_btn);
             this.Informationserstellung.Controls.Add(this.label3);
             this.Informationserstellung.Controls.Add(this.comboBox1);
             this.Informationserstellung.Controls.Add(this.label1);
@@ -145,118 +214,70 @@
             this.Informationserstellung.Text = "Informationserstellung";
             this.Informationserstellung.UseVisualStyleBackColor = true;
             // 
-            // Suche
+            // informationen_tags_tb
             // 
-            this.Suche.Controls.Add(this.button4);
-            this.Suche.Controls.Add(this.button3);
-            this.Suche.Controls.Add(this.textBox11);
-            this.Suche.Controls.Add(this.textBox10);
-            this.Suche.Controls.Add(this.label16);
-            this.Suche.Controls.Add(this.label15);
-            this.Suche.Controls.Add(this.textBox9);
-            this.Suche.Controls.Add(this.label14);
-            this.Suche.Controls.Add(this.comboBox2);
-            this.Suche.Controls.Add(this.label13);
-            this.Suche.Controls.Add(this.label11);
-            this.Suche.Location = new System.Drawing.Point(4, 22);
-            this.Suche.Name = "Suche";
-            this.Suche.Size = new System.Drawing.Size(732, 647);
-            this.Suche.TabIndex = 2;
-            this.Suche.Text = "Suche/Kommentieren";
-            this.Suche.UseVisualStyleBackColor = true;
+            this.informationen_tags_tb.Location = new System.Drawing.Point(184, 353);
+            this.informationen_tags_tb.Name = "informationen_tags_tb";
+            this.informationen_tags_tb.Size = new System.Drawing.Size(357, 20);
+            this.informationen_tags_tb.TabIndex = 32;
             // 
-            // label7
+            // label12
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(45, 205);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "Kernanforderung";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(128, 356);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Tags";
             // 
-            // label8
+            // information_dokumente_tb
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 165);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Projektleiter";
+            this.information_dokumente_tb.Location = new System.Drawing.Point(184, 309);
+            this.information_dokumente_tb.Name = "information_dokumente_tb";
+            this.information_dokumente_tb.Size = new System.Drawing.Size(357, 20);
+            this.information_dokumente_tb.TabIndex = 30;
             // 
-            // label9
+            // information_bilder_tb
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(45, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Kunde";
+            this.information_bilder_tb.Location = new System.Drawing.Point(184, 271);
+            this.information_bilder_tb.Name = "information_bilder_tb";
+            this.information_bilder_tb.Size = new System.Drawing.Size(357, 20);
+            this.information_bilder_tb.TabIndex = 29;
             // 
-            // label10
+            // information_text_tb
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(45, 87);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Projektname";
+            this.information_text_tb.Location = new System.Drawing.Point(184, 112);
+            this.information_text_tb.Multiline = true;
+            this.information_text_tb.Name = "information_text_tb";
+            this.information_text_tb.Size = new System.Drawing.Size(357, 140);
+            this.information_text_tb.TabIndex = 27;
             // 
-            // textBox8
+            // label4
             // 
-            this.textBox8.Location = new System.Drawing.Point(155, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(379, 20);
-            this.textBox8.TabIndex = 13;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(29, 309);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 13);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Andere Dokumente (URL)";
             // 
-            // button2
+            // information_hinzufuegen_btn
             // 
-            this.button2.Location = new System.Drawing.Point(155, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 42);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Projekt erstellen";
-            this.button2.UseVisualStyleBackColor = true;
+            this.information_hinzufuegen_btn.Location = new System.Drawing.Point(425, 400);
+            this.information_hinzufuegen_btn.Name = "information_hinzufuegen_btn";
+            this.information_hinzufuegen_btn.Size = new System.Drawing.Size(116, 42);
+            this.information_hinzufuegen_btn.TabIndex = 24;
+            this.information_hinzufuegen_btn.Text = "Information erstellen";
+            this.information_hinzufuegen_btn.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // label3
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(26, 30);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 18);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Suche/Kommentieren";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(155, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(379, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(155, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(379, 20);
-            this.textBox2.TabIndex = 22;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(155, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(379, 20);
-            this.textBox3.TabIndex = 23;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(425, 400);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 42);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Information erstellen";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(95, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 13);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Bilder (URL)";
             // 
             // comboBox1
             // 
@@ -284,61 +305,94 @@
             this.label2.TabIndex = 26;
             this.label2.Text = "Text";
             // 
-            // textBox4
+            // Suche
             // 
-            this.textBox4.Location = new System.Drawing.Point(184, 112);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(357, 140);
-            this.textBox4.TabIndex = 27;
+            this.Suche.Controls.Add(this.kommentar_hinzufuegen_btn);
+            this.Suche.Controls.Add(this.suchen_btn);
+            this.Suche.Controls.Add(this.textBox11);
+            this.Suche.Controls.Add(this.suche_kommentar_tb);
+            this.Suche.Controls.Add(this.label16);
+            this.Suche.Controls.Add(this.label15);
+            this.Suche.Controls.Add(this.suche_tags_tb);
+            this.Suche.Controls.Add(this.label14);
+            this.Suche.Controls.Add(this.comboBox2);
+            this.Suche.Controls.Add(this.label13);
+            this.Suche.Controls.Add(this.label11);
+            this.Suche.Location = new System.Drawing.Point(4, 22);
+            this.Suche.Name = "Suche";
+            this.Suche.Size = new System.Drawing.Size(732, 647);
+            this.Suche.TabIndex = 2;
+            this.Suche.Text = "Suche/Kommentieren";
+            this.Suche.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // kommentar_hinzufuegen_btn
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(95, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Bilder (URL)";
+            this.kommentar_hinzufuegen_btn.Location = new System.Drawing.Point(429, 566);
+            this.kommentar_hinzufuegen_btn.Name = "kommentar_hinzufuegen_btn";
+            this.kommentar_hinzufuegen_btn.Size = new System.Drawing.Size(146, 42);
+            this.kommentar_hinzufuegen_btn.TabIndex = 42;
+            this.kommentar_hinzufuegen_btn.Text = "Kommentar hinzufügen";
+            this.kommentar_hinzufuegen_btn.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // suchen_btn
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 309);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 13);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Andere Dokumente (URL)";
+            this.suchen_btn.Location = new System.Drawing.Point(459, 155);
+            this.suchen_btn.Name = "suchen_btn";
+            this.suchen_btn.Size = new System.Drawing.Size(116, 42);
+            this.suchen_btn.TabIndex = 41;
+            this.suchen_btn.Text = "Suchen";
+            this.suchen_btn.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // textBox11
             // 
-            this.textBox5.Location = new System.Drawing.Point(184, 271);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(357, 20);
-            this.textBox5.TabIndex = 29;
+            this.textBox11.Location = new System.Drawing.Point(135, 274);
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(440, 191);
+            this.textBox11.TabIndex = 40;
             // 
-            // textBox6
+            // suche_kommentar_tb
             // 
-            this.textBox6.Location = new System.Drawing.Point(184, 309);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(357, 20);
-            this.textBox6.TabIndex = 30;
+            this.suche_kommentar_tb.Location = new System.Drawing.Point(135, 481);
+            this.suche_kommentar_tb.Multiline = true;
+            this.suche_kommentar_tb.Name = "suche_kommentar_tb";
+            this.suche_kommentar_tb.Size = new System.Drawing.Size(440, 69);
+            this.suche_kommentar_tb.TabIndex = 39;
             // 
-            // label12
+            // label16
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(128, 356);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(31, 13);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Tags";
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(27, 481);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 13);
+            this.label16.TabIndex = 38;
+            this.label16.Text = "Kommentar";
             // 
-            // textBox7
+            // label15
             // 
-            this.textBox7.Location = new System.Drawing.Point(184, 353);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(357, 20);
-            this.textBox7.TabIndex = 32;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(26, 277);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(91, 13);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Projektinformation";
+            // 
+            // suche_tags_tb
+            // 
+            this.suche_tags_tb.Location = new System.Drawing.Point(135, 122);
+            this.suche_tags_tb.Name = "suche_tags_tb";
+            this.suche_tags_tb.Size = new System.Drawing.Size(273, 20);
+            this.suche_tags_tb.TabIndex = 36;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(26, 122);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 13);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Suche nach Tags";
             // 
             // comboBox2
             // 
@@ -357,74 +411,12 @@
             this.label13.TabIndex = 33;
             this.label13.Text = "Projekt";
             // 
-            // label14
+            // label11
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(26, 122);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 13);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Suche nach Tags";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(135, 122);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(273, 20);
-            this.textBox9.TabIndex = 36;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 277);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(91, 13);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Projektinformation";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(27, 481);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 13);
-            this.label16.TabIndex = 38;
-            this.label16.Text = "Kommentar";
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(135, 481);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(440, 69);
-            this.textBox10.TabIndex = 39;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(135, 274);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(440, 191);
-            this.textBox11.TabIndex = 40;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(459, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 42);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Suchen";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(429, 566);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 42);
-            this.button4.TabIndex = 42;
-            this.button4.Text = "Kommentar hinzufügen";
-            this.button4.UseVisualStyleBackColor = true;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 23);
+            this.label11.TabIndex = 43;
             // 
             // Form1
             // 
@@ -454,36 +446,36 @@
         private System.Windows.Forms.TabPage Informationserstellung;
         private System.Windows.Forms.TabPage Suche;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button project_erstellen_btn;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox projektname_tb;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox kernanforderung_tb;
+        private System.Windows.Forms.TextBox projektleiter_tb;
+        private System.Windows.Forms.TextBox kunde_tb;
+        private System.Windows.Forms.Button information_hinzufuegen_btn;
+        private System.Windows.Forms.TextBox information_dokumente_tb;
+        private System.Windows.Forms.TextBox information_bilder_tb;
+        private System.Windows.Forms.TextBox information_text_tb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox informationen_tags_tb;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox suche_kommentar_tb;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox suche_tags_tb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button kommentar_hinzufuegen_btn;
+        private System.Windows.Forms.Button suchen_btn;
     }
 }
 
