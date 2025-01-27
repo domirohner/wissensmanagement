@@ -12,9 +12,9 @@ C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\b
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\bin\Debug\Wissensmanagement.exe
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\bin\Debug\Wissensmanagement.pdb
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.csproj.AssemblyReference.cache
-C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.Form1.resources
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.Properties.Resources.resources
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.csproj.GenerateResource.cache
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.csproj.CoreCompileInputs.cache
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.exe
 C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.pdb
+C:\Users\domin\Repos\wissensmanagement\src\Wissensmanagement\Wissensmanagement\obj\Debug\Wissensmanagement.Form1.resources

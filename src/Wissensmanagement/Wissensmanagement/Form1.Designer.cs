@@ -121,7 +121,7 @@
             // 
             // kernanforderung_tb
             // 
-            this.kernanforderung_tb.Location = new System.Drawing.Point(155, 202);
+            this.kernanforderung_tb.Location = new System.Drawing.Point(155, 205);
             this.kernanforderung_tb.Name = "kernanforderung_tb";
             this.kernanforderung_tb.Size = new System.Drawing.Size(379, 20);
             this.kernanforderung_tb.TabIndex = 23;
