@@ -270,6 +270,9 @@ namespace Wissensmanagement
                 return;
             }
 
+            // Lese das Tag aus der Textbox (wenn vorhanden)
+            string gesuchtesTag = suche_tags_tb.Text.Trim();
+
             // Initialisiere einen StringBuilder, um die Informationen zu sammeln
             StringBuilder projektInformationen = new StringBuilder();
 
@@ -277,37 +280,50 @@ namespace Wissensmanagement
             projektInformationen.AppendLine($"Projekt: {projekt.getProjectName()}");
             projektInformationen.AppendLine("Informationen:");
 
-            foreach (var info in projekt.getProjectInfo())
+            // Filtere die Informationen basierend auf dem eingegebenen Tag
+            var gefilterteInfos = string.IsNullOrWhiteSpace(gesuchtesTag)
+                ? projekt.getProjectInfo() // Falls kein Tag angegeben ist, zeige alle Informationen an
+                : projekt.getProjectInfo().Where(info => info.tags.Any(t => t.tag_Name.Equals(gesuchtesTag, StringComparison.OrdinalIgnoreCase))).ToList(); // Nur Infos mit dem passenden Tag anzeigen
+
+            if (!gefilterteInfos.Any())
             {
-                projektInformationen.AppendLine($"Titel: {info.getTitle()}");
-                projektInformationen.AppendLine($"Datum: {info.date}");
-
-                // Reguläre Ausdrücke zum Extrahieren von Text, Bild und Dokument
-                string text = info.getText();
-
-                // Regex zum Extrahieren der Teile: Bild und Dokument
-                string bild = Regex.Match(text, @"Bild: ([^\n]*)").Groups[1].Value;
-                string dokument = Regex.Match(text, @"Dokument: ([^\n]*)").Groups[1].Value;
-
-                // Nun den Text ohne "Bild:" und "Dokument:" extrahieren
-                string reinerText = text.Split(new string[] { "Bild: ", "Dokument: " }, StringSplitOptions.None)[0];
-
-                // Jetzt alles in den StringBuilder einfügen
-                projektInformationen.AppendLine($"{reinerText}");
-                projektInformationen.AppendLine($"Bild: {bild}");
-                projektInformationen.AppendLine($"Dokument: {dokument}");
-
-                projektInformationen.AppendLine("Tags:");
-                foreach (var tag in info.tags)
+                projektInformationen.AppendLine("Keine passenden Informationen gefunden.");
+            }
+            else
+            {
+                foreach (var info in gefilterteInfos)
                 {
-                    projektInformationen.AppendLine($"- {tag.tag_Name}");
+                    projektInformationen.AppendLine($"Titel: {info.getTitle()}");
+                    projektInformationen.AppendLine($"Datum: {info.date}");
+
+                    // Reguläre Ausdrücke zum Extrahieren von Text, Bild und Dokument
+                    string text = info.getText();
+
+                    // Regex zum Extrahieren der Teile: Bild und Dokument
+                    string bild = Regex.Match(text, @"Bild: ([^\n]*)").Groups[1].Value;
+                    string dokument = Regex.Match(text, @"Dokument: ([^\n]*)").Groups[1].Value;
+
+                    // Nun den Text ohne "Bild:" und "Dokument:" extrahieren
+                    string reinerText = text.Split(new string[] { "Bild: ", "Dokument: " }, StringSplitOptions.None)[0];
+
+                    // Jetzt alles in den StringBuilder einfügen
+                    projektInformationen.AppendLine($"{reinerText}");
+                    projektInformationen.AppendLine($"Bild: {bild}");
+                    projektInformationen.AppendLine($"Dokument: {dokument}");
+
+                    projektInformationen.AppendLine("Tags:");
+                    foreach (var tag in info.tags)
+                    {
+                        projektInformationen.AppendLine($"- {tag.tag_Name}");
+                    }
+                    projektInformationen.AppendLine();  // Zeilenumbruch für jede Info
                 }
-                projektInformationen.AppendLine();  // Zeilenumbruch für jede Info
             }
 
             // Zeige die gesammelten Informationen in der TextBox an
             suche_projektinformation_tb.Text = projektInformationen.ToString();
         }
+
 
         private void UpdateComboBox()
         {
