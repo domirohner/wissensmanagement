@@ -50,19 +50,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.information_hinzufuegen_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.project_cb = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Suche = new System.Windows.Forms.TabPage();
             this.kommentar_hinzufuegen_btn = new System.Windows.Forms.Button();
             this.suchen_btn = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.suche_projektinformation_tb = new System.Windows.Forms.TextBox();
             this.suche_kommentar_tb = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.suche_tags_tb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.suche_project_cb = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
@@ -203,7 +203,7 @@
             this.Informationserstellung.Controls.Add(this.label4);
             this.Informationserstellung.Controls.Add(this.information_hinzufuegen_btn);
             this.Informationserstellung.Controls.Add(this.label3);
-            this.Informationserstellung.Controls.Add(this.comboBox1);
+            this.Informationserstellung.Controls.Add(this.project_cb);
             this.Informationserstellung.Controls.Add(this.label1);
             this.Informationserstellung.Controls.Add(this.label2);
             this.Informationserstellung.Location = new System.Drawing.Point(4, 22);
@@ -269,6 +269,7 @@
             this.information_hinzufuegen_btn.TabIndex = 24;
             this.information_hinzufuegen_btn.Text = "Information erstellen";
             this.information_hinzufuegen_btn.UseVisualStyleBackColor = true;
+            this.information_hinzufuegen_btn.Click += new System.EventHandler(this.information_hinzufuegen_btn_Click);
             // 
             // label3
             // 
@@ -279,13 +280,13 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Bilder (URL)";
             // 
-            // comboBox1
+            // project_cb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(184, 73);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(273, 21);
-            this.comboBox1.TabIndex = 25;
+            this.project_cb.FormattingEnabled = true;
+            this.project_cb.Location = new System.Drawing.Point(184, 73);
+            this.project_cb.Name = "project_cb";
+            this.project_cb.Size = new System.Drawing.Size(273, 21);
+            this.project_cb.TabIndex = 25;
             // 
             // label1
             // 
@@ -309,13 +310,13 @@
             // 
             this.Suche.Controls.Add(this.kommentar_hinzufuegen_btn);
             this.Suche.Controls.Add(this.suchen_btn);
-            this.Suche.Controls.Add(this.textBox11);
+            this.Suche.Controls.Add(this.suche_projektinformation_tb);
             this.Suche.Controls.Add(this.suche_kommentar_tb);
             this.Suche.Controls.Add(this.label16);
             this.Suche.Controls.Add(this.label15);
             this.Suche.Controls.Add(this.suche_tags_tb);
             this.Suche.Controls.Add(this.label14);
-            this.Suche.Controls.Add(this.comboBox2);
+            this.Suche.Controls.Add(this.suche_project_cb);
             this.Suche.Controls.Add(this.label13);
             this.Suche.Controls.Add(this.label11);
             this.Suche.Location = new System.Drawing.Point(4, 22);
@@ -342,15 +343,17 @@
             this.suchen_btn.TabIndex = 41;
             this.suchen_btn.Text = "Suchen";
             this.suchen_btn.UseVisualStyleBackColor = true;
+            this.suchen_btn.Click += new System.EventHandler(this.suchen_btn_Click);
             // 
-            // textBox11
+            // suche_projektinformation_tb
             // 
-            this.textBox11.Location = new System.Drawing.Point(135, 274);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(440, 191);
-            this.textBox11.TabIndex = 40;
+            this.suche_projektinformation_tb.Location = new System.Drawing.Point(135, 274);
+            this.suche_projektinformation_tb.Multiline = true;
+            this.suche_projektinformation_tb.Name = "suche_projektinformation_tb";
+            this.suche_projektinformation_tb.ReadOnly = true;
+            this.suche_projektinformation_tb.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.suche_projektinformation_tb.Size = new System.Drawing.Size(440, 191);
+            this.suche_projektinformation_tb.TabIndex = 40;
             // 
             // suche_kommentar_tb
             // 
@@ -394,13 +397,13 @@
             this.label14.TabIndex = 35;
             this.label14.Text = "Suche nach Tags";
             // 
-            // comboBox2
+            // suche_project_cb
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(135, 77);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(273, 21);
-            this.comboBox2.TabIndex = 34;
+            this.suche_project_cb.FormattingEnabled = true;
+            this.suche_project_cb.Location = new System.Drawing.Point(135, 77);
+            this.suche_project_cb.Name = "suche_project_cb";
+            this.suche_project_cb.Size = new System.Drawing.Size(273, 21);
+            this.suche_project_cb.TabIndex = 34;
             // 
             // label13
             // 
@@ -461,7 +464,7 @@
         private System.Windows.Forms.TextBox information_text_tb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox project_cb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox informationen_tags_tb;
@@ -471,11 +474,12 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox suche_tags_tb;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox suche_project_cb;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox suche_projektinformation_tb;
         private System.Windows.Forms.Button kommentar_hinzufuegen_btn;
         private System.Windows.Forms.Button suchen_btn;
+
     }
 }
 
