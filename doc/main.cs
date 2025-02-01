@@ -30,6 +30,7 @@ namespace Wissensmanagement
         public string text;
         public string date;
         public List<Tag> tags;
+        public List<string> comments = new List<string>();
 
         // Constructor
         public Info(string title, string text, string date, List<Tag> tags)
@@ -37,7 +38,8 @@ namespace Wissensmanagement
             this.title = title;
             this.text = text;
             this.date = date;
-            this.tags = tags;
+            this.tags = tags ?? new List<Tag>();
+            this.comments = new List<string>();
         }
 
         // Method
@@ -49,6 +51,15 @@ namespace Wissensmanagement
         public void removeTag(Tag tag)
         {
             tags.Remove(tag);
+        }
+
+        public void addComment(string comment)
+        {
+            if (comments == null)
+            {
+                comments = new List<string>();  // Sicherstellen, dass die Liste existiert
+            }
+            comments.Add(comment);
         }
 
         public string getText()
@@ -226,7 +237,15 @@ namespace Wissensmanagement
                 return;
             }
 
+            // Erstelle neues Projekt
             app.NeuesProjektErstellen(projektname);
+
+            // Felder leeren
+            projektname_tb.Clear();
+            kunde_tb.Clear();
+            projektleiter_tb.Clear();
+            kernanforderung_tb.Clear();
+
             UpdateComboBox();
         }
 
@@ -238,11 +257,19 @@ namespace Wissensmanagement
                 return;
             }
             string projektname = project_cb.SelectedItem.ToString();
-            string title = information_text_tb.Text;
+            string title = information_text_tb.Text.Length > 10 ? information_text_tb.Text.Substring(0, 10) : information_text_tb.Text;
             string text = $"Text: {information_text_tb.Text}\nBild: {information_bilder_tb.Text}\nDokument: {information_dokumente_tb.Text}";
             string date = DateTime.Now.ToString("yyyy-MM-dd");
             List<Tag> tags = informationen_tags_tb.Text.Split(',').Select(t => new Tag(t.Trim())).ToList();
+
             app.NeueInformationHinzufuegen(projektname, title, text, date, tags);
+
+            // Felder leeren
+            information_text_tb.Clear();
+            information_bilder_tb.Clear();
+            information_dokumente_tb.Clear();
+            informationen_tags_tb.Clear();
+
         }
 
         private void suchen_btn_Click(object sender, EventArgs e)
@@ -273,6 +300,9 @@ namespace Wissensmanagement
             // Lese das Tag aus der Textbox (wenn vorhanden)
             string gesuchtesTag = suche_tags_tb.Text.Trim();
 
+            // New
+            informationstitel_cb.Items.Clear();
+
             // Initialisiere einen StringBuilder, um die Informationen zu sammeln
             StringBuilder projektInformationen = new StringBuilder();
 
@@ -291,8 +321,11 @@ namespace Wissensmanagement
             }
             else
             {
+                informationstitel_cb.Items.Clear();
                 foreach (var info in gefilterteInfos)
                 {
+                    // New
+                    informationstitel_cb.Items.Add(info.getTitle());
                     projektInformationen.AppendLine($"Titel: {info.getTitle()}");
                     projektInformationen.AppendLine($"Datum: {info.date}");
 
@@ -316,6 +349,20 @@ namespace Wissensmanagement
                     {
                         projektInformationen.AppendLine($"- {tag.tag_Name}");
                     }
+                    // New
+                    projektInformationen.AppendLine("Kommentare:");
+                    if (info.comments != null && info.comments.Any())  // Überprüft, ob Kommentare vorhanden sind
+                    {
+                        foreach (var comment in info.comments)
+                        {
+                            projektInformationen.AppendLine($"- {comment}");
+                        }
+                    }
+                    else
+                    {
+                        projektInformationen.AppendLine("Keine Kommentare vorhanden.");  // Optionaler Hinweis, wenn keine Kommentare existieren
+                    }
+
                     projektInformationen.AppendLine();  // Zeilenumbruch für jede Info
                 }
             }
@@ -324,15 +371,66 @@ namespace Wissensmanagement
             suche_projektinformation_tb.Text = projektInformationen.ToString();
         }
 
+        private void kommentar_btn_Click(object sender, EventArgs e)
+        {
+            // Überprüft, ob ein Titel in der ComboBox ausgewählt wurde
+            if (informationstitel_cb.SelectedItem == null)
+            {
+                MessageBox.Show("Bitte einen Informationstitel auswählen.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Hole den Titel der ausgewählten Information und den Kommentar aus dem Textfeld
+            string titel = informationstitel_cb.SelectedItem.ToString();
+            string kommentar = kommentar_text_tb.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(kommentar))
+            {
+                MessageBox.Show("Kommentar darf nicht leer sein.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Finde die Info, zu der der Kommentar hinzugefügt werden soll
+            var info = app.GetProjects()
+                          .SelectMany(p => p.getProjectInfo())
+                          .FirstOrDefault(i => i.getTitle() == titel);
+
+            if (info == null)
+            {
+                MessageBox.Show("Information nicht gefunden.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Füge den Kommentar hinzu
+            info.addComment(kommentar);
+
+            // Speichere die Änderungen
+            app.Speichern();
+
+            MessageBox.Show("Kommentar erfolgreich hinzugefügt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Leere das Kommentartextfeld
+            kommentar_text_tb.Clear();
+
+            // Führe automatisch die Suche aus
+            if (suche_project_cb.SelectedItem != null)
+            {
+                suchen_btn_Click(sender, e);  // Simuliere den Klick auf den Suchen-Button
+            }
+        }
 
         private void UpdateComboBox()
         {
-            project_cb.Items.Clear();
-            var projects = app.GetProjects();
-            foreach (var project in projects)
+            // Verhindere das wiederholte Hinzufügen von Projekten
+            if (project_cb.Items.Count == 0)
             {
-                project_cb.Items.Add(project.getProjectName());
-                suche_project_cb.Items.Add(project.getProjectName());
+                project_cb.Items.Clear();
+                var projects = app.GetProjects();
+                foreach (var project in projects)
+                {
+                    project_cb.Items.Add(project.getProjectName());
+                    suche_project_cb.Items.Add(project.getProjectName());
+                }
             }
         }
     }

@@ -54,10 +54,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Suche = new System.Windows.Forms.TabPage();
-            this.kommentar_hinzufuegen_btn = new System.Windows.Forms.Button();
+            this.kommentar_btn = new System.Windows.Forms.Button();
+            this.informationstitel_cb = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.suchen_btn = new System.Windows.Forms.Button();
             this.suche_projektinformation_tb = new System.Windows.Forms.TextBox();
-            this.suche_kommentar_tb = new System.Windows.Forms.TextBox();
+            this.kommentar_text_tb = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.suche_tags_tb = new System.Windows.Forms.TextBox();
@@ -308,10 +310,12 @@
             // 
             // Suche
             // 
-            this.Suche.Controls.Add(this.kommentar_hinzufuegen_btn);
+            this.Suche.Controls.Add(this.kommentar_btn);
+            this.Suche.Controls.Add(this.informationstitel_cb);
+            this.Suche.Controls.Add(this.label17);
             this.Suche.Controls.Add(this.suchen_btn);
             this.Suche.Controls.Add(this.suche_projektinformation_tb);
-            this.Suche.Controls.Add(this.suche_kommentar_tb);
+            this.Suche.Controls.Add(this.kommentar_text_tb);
             this.Suche.Controls.Add(this.label16);
             this.Suche.Controls.Add(this.label15);
             this.Suche.Controls.Add(this.suche_tags_tb);
@@ -326,14 +330,32 @@
             this.Suche.Text = "Suche/Kommentieren";
             this.Suche.UseVisualStyleBackColor = true;
             // 
-            // kommentar_hinzufuegen_btn
+            // kommentar_btn
             // 
-            this.kommentar_hinzufuegen_btn.Location = new System.Drawing.Point(429, 566);
-            this.kommentar_hinzufuegen_btn.Name = "kommentar_hinzufuegen_btn";
-            this.kommentar_hinzufuegen_btn.Size = new System.Drawing.Size(146, 42);
-            this.kommentar_hinzufuegen_btn.TabIndex = 42;
-            this.kommentar_hinzufuegen_btn.Text = "Kommentar hinzufügen";
-            this.kommentar_hinzufuegen_btn.UseVisualStyleBackColor = true;
+            this.kommentar_btn.Location = new System.Drawing.Point(432, 572);
+            this.kommentar_btn.Name = "kommentar_btn";
+            this.kommentar_btn.Size = new System.Drawing.Size(143, 42);
+            this.kommentar_btn.TabIndex = 49;
+            this.kommentar_btn.Text = "Kommentar hinzufügen";
+            this.kommentar_btn.UseVisualStyleBackColor = true;
+            this.kommentar_btn.Click += new System.EventHandler(this.kommentar_btn_Click);
+            // 
+            // informationstitel_cb
+            // 
+            this.informationstitel_cb.FormattingEnabled = true;
+            this.informationstitel_cb.Location = new System.Drawing.Point(135, 443);
+            this.informationstitel_cb.Name = "informationstitel_cb";
+            this.informationstitel_cb.Size = new System.Drawing.Size(273, 21);
+            this.informationstitel_cb.TabIndex = 48;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(27, 446);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(80, 13);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "Informationstitel";
             // 
             // suchen_btn
             // 
@@ -347,7 +369,7 @@
             // 
             // suche_projektinformation_tb
             // 
-            this.suche_projektinformation_tb.Location = new System.Drawing.Point(135, 274);
+            this.suche_projektinformation_tb.Location = new System.Drawing.Point(135, 231);
             this.suche_projektinformation_tb.Multiline = true;
             this.suche_projektinformation_tb.Name = "suche_projektinformation_tb";
             this.suche_projektinformation_tb.ReadOnly = true;
@@ -355,13 +377,13 @@
             this.suche_projektinformation_tb.Size = new System.Drawing.Size(440, 191);
             this.suche_projektinformation_tb.TabIndex = 40;
             // 
-            // suche_kommentar_tb
+            // kommentar_text_tb
             // 
-            this.suche_kommentar_tb.Location = new System.Drawing.Point(135, 481);
-            this.suche_kommentar_tb.Multiline = true;
-            this.suche_kommentar_tb.Name = "suche_kommentar_tb";
-            this.suche_kommentar_tb.Size = new System.Drawing.Size(440, 69);
-            this.suche_kommentar_tb.TabIndex = 39;
+            this.kommentar_text_tb.Location = new System.Drawing.Point(135, 481);
+            this.kommentar_text_tb.Multiline = true;
+            this.kommentar_text_tb.Name = "kommentar_text_tb";
+            this.kommentar_text_tb.Size = new System.Drawing.Size(440, 69);
+            this.kommentar_text_tb.TabIndex = 39;
             // 
             // label16
             // 
@@ -469,7 +491,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox informationen_tags_tb;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox suche_kommentar_tb;
+        private System.Windows.Forms.TextBox kommentar_text_tb;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox suche_tags_tb;
@@ -477,8 +499,10 @@
         private System.Windows.Forms.ComboBox suche_project_cb;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox suche_projektinformation_tb;
-        private System.Windows.Forms.Button kommentar_hinzufuegen_btn;
         private System.Windows.Forms.Button suchen_btn;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button kommentar_btn;
+        private System.Windows.Forms.ComboBox informationstitel_cb;
 
     }
 }
