@@ -12,10 +12,10 @@ namespace Wissensmanagement
     [Serializable]
     public class Tag
     {
-        // Attributes
+        // Attribute
         public string tag_Name;
 
-        // Constructor
+        // Konstruktor
         public Tag(string tag_Name)
         {
             this.tag_Name = tag_Name;
@@ -25,14 +25,14 @@ namespace Wissensmanagement
     [Serializable]
     public class Info
     {
-        // Attributes
+        // Attribute
         public string title;
         public string text;
         public string date;
         public List<Tag> tags;
         public List<string> comments = new List<string>();
 
-        // Constructor
+        // Konstruktor
         public Info(string title, string text, string date, List<Tag> tags)
         {
             this.title = title;
@@ -42,7 +42,7 @@ namespace Wissensmanagement
             this.comments = new List<string>();
         }
 
-        // Method
+        // Methoden
         public void addTag(Tag tag)
         {
             tags.Add(tag);
@@ -76,18 +76,18 @@ namespace Wissensmanagement
     [Serializable]
     public class Project
     {
-        // Attributes
+        // Attribute
         public string project_Name;
         public List<Info> project_Info = new List<Info>();
         public List<Tag> project_Tags = new List<Tag>();
 
-        // Constructor
+        // Konstruktor
         public Project(string project_Name)
         {
             this.project_Name = project_Name;
         }
 
-        // Method
+        // Methoden
         public string getProjectName()
         {
             return project_Name;
@@ -127,8 +127,9 @@ namespace Wissensmanagement
     public class WissensmanagementApp
     {
         private List<Project> projects = new List<Project>();
+        // Definition Speicherort (es muss ein C:\Temp existieren)
         private const string SpeicherDatei = "C:\\Temp\\projects.dat";
-
+        // Erstellung neues Projekt
         public void NeuesProjektErstellen(string projektName)
         {
             var projekt = new Project(projektName);
@@ -141,21 +142,23 @@ namespace Wissensmanagement
         {
             return projects;
         }
-
+        // Information hinzufügen
         public void NeueInformationHinzufuegen(string projektName, string title, string text, string date, List<Tag> tags)
         {
             var projekt = projects.FirstOrDefault(p => p.project_Name == projektName);
+            // Fehler ausgeben wenn Projekt nicht gefunden wird
             if (projekt == null)
             {
                 MessageBox.Show("Projekt nicht gefunden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             var info = new Info(title, text, date, tags);
+            // Info hinzufügen
             projekt.addInfo(info);
             Speichern();
             MessageBox.Show("Information erfolgreich hinzugefügt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
+        // Information suchen
         public void InformationenSuchen()
         {
             Console.Write("Tag eingeben: ");
@@ -168,6 +171,7 @@ namespace Wissensmanagement
 
             if (ergebnisse.Any())
             {
+                // Information ausgeben
                 foreach (var ergebnis in ergebnisse)
                 {
                     Console.WriteLine($"Projekt: {ergebnis.projektName}, Titel: {ergebnis.Info.getTitle()}, Inhalt: {ergebnis.Info.getText()}");
@@ -178,18 +182,20 @@ namespace Wissensmanagement
                 Console.WriteLine("Keine Informationen gefunden.");
             }
         }
-
+        // Speichern in definierte Datei
         public void Speichern()
         {
+            // Schreibt in Dataei
             using (var stream = new FileStream(SpeicherDatei, FileMode.Create))
             {
                 var formatter = new BinaryFormatter();
                 formatter.Serialize(stream, projects);
             }
         }
-
+        // Laden der definierten Datei
         public void Laden()
         {
+            // Prüft ob Datei exisitert
             if (File.Exists(SpeicherDatei))
             {
                 using (var stream = new FileStream(SpeicherDatei, FileMode.Open))
@@ -199,38 +205,43 @@ namespace Wissensmanagement
                 }
             }
         }
-
+        // Main
         public static void Main(string[] args)
         {
+            // App laden
             var app = new WissensmanagementApp();
             app.Laden();
 
+            // GUI initializieren
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            // Starte Form1
             Application.Run(new Form1(app));
         }
     }
-
+    // Definition Form Klasse
     public partial class Form1 : Form
     {
         private WissensmanagementApp app;
 
         public Form1(WissensmanagementApp app)
         {
+            // Initialisierung
             InitializeComponent();
             this.app = app;
         }
 
+        // Update Combo Box mit Projekten beim Laden
         private void Form1_Load(object sender, EventArgs e)
         {
             UpdateComboBox();
         }
-
+        // Klicken des Projekt erstellen Button
         private void create_project_Click(object sender, EventArgs e)
         {
             string projektname = projektname_tb.Text;
 
+            // Fehlermeldung ausgeben wenn Projektname leer ist
             if (string.IsNullOrWhiteSpace(projektname))
             {
                 MessageBox.Show("Projektname darf nicht leer sein.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -248,20 +259,23 @@ namespace Wissensmanagement
 
             UpdateComboBox();
         }
-
+        // Klickem des Information hinzufügen Button
         private void information_hinzufuegen_btn_Click(object sender, EventArgs e)
         {
+            // Gib Fehlermeldung aus wenn kein Projekt gewählt ist
             if (project_cb.SelectedItem == null)
             {
                 MessageBox.Show("Bitte ein Projekt auswählen.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            // Erhalte werde des Projekts
             string projektname = project_cb.SelectedItem.ToString();
             string title = information_text_tb.Text.Length > 10 ? information_text_tb.Text.Substring(0, 10) : information_text_tb.Text;
             string text = $"Text: {information_text_tb.Text}\nBild: {information_bilder_tb.Text}\nDokument: {information_dokumente_tb.Text}";
             string date = DateTime.Now.ToString("yyyy-MM-dd");
             List<Tag> tags = informationen_tags_tb.Text.Split(',').Select(t => new Tag(t.Trim())).ToList();
 
+            // Füge Information hinzu
             app.NeueInformationHinzufuegen(projektname, title, text, date, tags);
 
             // Felder leeren
@@ -271,13 +285,12 @@ namespace Wissensmanagement
             informationen_tags_tb.Clear();
 
         }
-
+        // Klicken Suchen Button
         private void suchen_btn_Click(object sender, EventArgs e)
         {
             // Lade die gespeicherten Projekte aus der Datei
             app.Laden();
 
-            // Überprüfe, ob ein Projekt ausgewählt wurde
             if (suche_project_cb.SelectedItem == null)
             {
                 MessageBox.Show("Bitte ein Projekt auswählen.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -300,7 +313,6 @@ namespace Wissensmanagement
             // Lese das Tag aus der Textbox (wenn vorhanden)
             string gesuchtesTag = suche_tags_tb.Text.Trim();
 
-            // New
             informationstitel_cb.Items.Clear();
 
             // Initialisiere einen StringBuilder, um die Informationen zu sammeln
@@ -312,7 +324,7 @@ namespace Wissensmanagement
 
             // Filtere die Informationen basierend auf dem eingegebenen Tag
             var gefilterteInfos = string.IsNullOrWhiteSpace(gesuchtesTag)
-                ? projekt.getProjectInfo() // Falls kein Tag angegeben ist, zeige alle Informationen an
+                ? projekt.getProjectInfo()
                 : projekt.getProjectInfo().Where(info => info.tags.Any(t => t.tag_Name.Equals(gesuchtesTag, StringComparison.OrdinalIgnoreCase))).ToList(); // Nur Infos mit dem passenden Tag anzeigen
 
             if (!gefilterteInfos.Any())
@@ -324,12 +336,10 @@ namespace Wissensmanagement
                 informationstitel_cb.Items.Clear();
                 foreach (var info in gefilterteInfos)
                 {
-                    // New
                     informationstitel_cb.Items.Add(info.getTitle());
                     projektInformationen.AppendLine($"Titel: {info.getTitle()}");
                     projektInformationen.AppendLine($"Datum: {info.date}");
 
-                    // Reguläre Ausdrücke zum Extrahieren von Text, Bild und Dokument
                     string text = info.getText();
 
                     // Regex zum Extrahieren der Teile: Bild und Dokument
@@ -339,7 +349,7 @@ namespace Wissensmanagement
                     // Nun den Text ohne "Bild:" und "Dokument:" extrahieren
                     string reinerText = text.Split(new string[] { "Bild: ", "Dokument: " }, StringSplitOptions.None)[0];
 
-                    // Jetzt alles in den StringBuilder einfügen
+                    // Werte ausgeben
                     projektInformationen.AppendLine($"{reinerText}");
                     projektInformationen.AppendLine($"Bild: {bild}");
                     projektInformationen.AppendLine($"Dokument: {dokument}");
@@ -349,9 +359,8 @@ namespace Wissensmanagement
                     {
                         projektInformationen.AppendLine($"- {tag.tag_Name}");
                     }
-                    // New
                     projektInformationen.AppendLine("Kommentare:");
-                    if (info.comments != null && info.comments.Any())  // Überprüft, ob Kommentare vorhanden sind
+                    if (info.comments != null && info.comments.Any())
                     {
                         foreach (var comment in info.comments)
                         {
@@ -360,14 +369,14 @@ namespace Wissensmanagement
                     }
                     else
                     {
-                        projektInformationen.AppendLine("Keine Kommentare vorhanden.");  // Optionaler Hinweis, wenn keine Kommentare existieren
+                        projektInformationen.AppendLine("Keine Kommentare vorhanden.");
                     }
-
-                    projektInformationen.AppendLine();  // Zeilenumbruch für jede Info
+                    // Zeilenumbruch für jede Info
+                    projektInformationen.AppendLine();
                 }
             }
 
-            // Zeige die gesammelten Informationen in der TextBox an
+            // Zeige die Informationen in der TextBox an
             suche_projektinformation_tb.Text = projektInformationen.ToString();
         }
 
@@ -418,20 +427,21 @@ namespace Wissensmanagement
                 suchen_btn_Click(sender, e);  // Simuliere den Klick auf den Suchen-Button
             }
         }
-
+        // Update der Combo Box mit Projekten
         private void UpdateComboBox()
         {
-            // Verhindere das wiederholte Hinzufügen von Projekten
-            if (project_cb.Items.Count == 0)
+            project_cb.Items.Clear();
+            suche_project_cb.Items.Clear();
+
+            // Erhalte alle Projekte
+            var projects = app.GetProjects();
+            // Füge Projekte hinzu
+            foreach (var project in projects)
             {
-                project_cb.Items.Clear();
-                var projects = app.GetProjects();
-                foreach (var project in projects)
-                {
-                    project_cb.Items.Add(project.getProjectName());
-                    suche_project_cb.Items.Add(project.getProjectName());
-                }
+                project_cb.Items.Add(project.getProjectName());
+                suche_project_cb.Items.Add(project.getProjectName());
             }
         }
+
     }
 }
