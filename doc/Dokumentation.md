@@ -9,6 +9,7 @@ Dozent: Christian Herren
 ## Situationsanalyse
 
 Die IT-Firma Xarelto möchte ein Wissensmanagementsystem einführen, um die Effizienz und den Wissensaustausch in Projekten zu verbessern.
+
 Der Projektleiter (PL) kann ein neues Projekt starten und grundlegende Informationen zum Projekt abgeben.
 Während dem Projekt kann das Team neue Informationen zum Projekt hinzufügen, wie Texte, Bilder (URL) und andere Dokumente (URL).
 Die Information kann mit maximal drei Tags gekennzeichnet werden.
@@ -38,13 +39,13 @@ In der nachfolgenden Tabelle sind alle geschätzten und effektiv geleisteten Stu
 
 ## Kontext Map
 
-Nach Analyse der Situation hat sich folgende Kontext Map ergeben:
+Nach Analyse der Situation undf Ausgangslage hat sich folgende Kontext Map ergeben:
 
 ![Kontext Map](/doc/Context_Map.png)
 
 # Kontext Diagramm
 
-Aus der Kontext Map konnte auch das Kontext Diagramm abgeleitet werden:
+Aus der Kontext Map konnte auch das Kontext Diagramm erstellt werden:
 
 ![Kontext Diagramm](/doc/Kontextdiagramm.png)
 
@@ -56,13 +57,15 @@ Um den Ablauf noch etwas genauer zu verstehen, haben wir auch noch ein Kommunika
 
 ## Klassendiagramm
 
-Anschliessend hatten wir ein genug grosses Verständnigss vom Projekt, damit wir die Klassen definieren konnten:
+Anschliessend hatten wir ein genug grosses Verständniss vom Projekt um die Klassen definieren zu können:
 
 ![Klassendiagramm](/doc/Classdiagram.png)
 
 ## Anforderungsanalyse
 
-Alle Anforderungen wurden aufgelistet. In unserem Projekt haben sich folgende Anforderungen und Risiken ergeben:
+Zudem wurden alle Anforderungen aufgelistet.
+
+In unserem Projekt haben sich folgende Anforderungen und Risiken ergeben:
 
 TODO
 
@@ -75,9 +78,17 @@ TODO
 
 ## Realisation
 
-In unserer Appliaktion haben wir zuerst das UI mit Windows Forms erstellT:
+In unserer Applikation haben wir zuerst das UI mit Windows Forms erstellt:
 
-TODO
 ![UI](/doc/UI.png)
 
 Anschliessend wurden die Klassen anhand des Klassendiagramms geschrieben.
+Damit hatten wir bereits einen soliden Aufbau des Projekts.
+
+Nach den Klassen haben wir uns gedanken gemacht, welche Funktionen alles benötigt werden. Dabei haben wir folgende Funktionen erstellt:
+
+- NeuesProjektErstellen
+- NeueInformationHinzufuegen
+- InformationenSuchen
+- Speichern
+- Laden
