@@ -13,51 +13,59 @@ Die IT-Firma Xarelto möchte ein Wissensmanagementsystem einführen, um die Effi
 Der Projektleiter (PL) kann ein neues Projekt starten und grundlegende Informationen zum Projekt abgeben.
 Während dem Projekt kann das Team neue Informationen zum Projekt hinzufügen, wie Texte, Bilder (URL) und andere Dokumente (URL).
 Die Information kann mit maximal drei Tags gekennzeichnet werden.
-Es sollten auch nachträglich Kommentare zu den Projektinformationen hinzugefügt werden können. Diese sollen jedoch kalr vom Originaltext abgegrenzt werden.
+Es sollten auch nachträglich Kommentare zu den Projektinformationen hinzugefügt werden können. Diese sollen jedoch klar vom Originaltext abgegrenzt werden.
 Durch die Möglichkeit, nach Tags zu suchen, wird das Finden relevanter Informationen erleichtert.
 
 ## Planung
 
-Zu Beginnn unseres Projektes haben wir alle Tätigkeiten aufgelistet und die dafür benötigte Zeit geschätzt.
+Zu Beginn unseres Projektes haben wir alle Tätigkeiten aufgelistet und die dafür benötigte Zeit geschätzt.
 In der nachfolgenden Tabelle sind alle geschätzten und effektiv geleisteten Stunden ersichtlich:
 
-| Aktivität                   | Stunden geplannt | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                       |
-| --------------------------- | ---------------- | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Initialisierung und Planung | 1                | 1                            |       |                                                                                                 |
-| Kontext Map                 | 1                | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.             |
-| Anforderungsanalyse         | 1                | 1                            |       |                                                                                                 |
-| Risikoanalyse               | 1                | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                       |
-| Kontextdiagramm             | 1                | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                        |
-| Kommunikationsdiagramm      | 1                | 0.75                         | 0.25  |                                                                                                 |
-| Klassendiagramm             | 1                | 1                            |       |                                                                                                 |
-| Testplan                    | 1                | 1                            |       |                                                                                                 |
-| Unit-tests                  | 2                | 3                            | 1     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht. |
-| Programmierung              | 5                | 7                            | 2     | Fehlersuche hat zum Teil mehr Zeit beansprucht als geplant.                                     |
-| Dokumentation               | 3                | 3                            |       |                                                                                                 |
-| Präsentation                | 2                |                              |       |                                                                                                 |
-| Reserve                     | 2                |                              |       |                                                                                                 |
+| Aktivität                   | Stunden geplant | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                       |
+| --------------------------- | --------------- | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
+| Initialisierung und Planung | 1               | 1                            |       |                                                                                                 |
+| Kontext Map                 | 1               | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.             |
+| Anforderungsanalyse         | 1               | 1                            |       |                                                                                                 |
+| Risikoanalyse               | 1               | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                       |
+| Kontextdiagramm             | 1               | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                        |
+| Kommunikationsdiagramm      | 1               | 0.75                         | 0.25  |                                                                                                 |
+| Klassendiagramm             | 1               | 1                            |       |                                                                                                 |
+| Testplan                    | 1               | 1                            |       |                                                                                                 |
+| Unit-tests                  | 2               | 3                            | 1     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht. |
+| Programmierung              | 5               | 7                            | 2     | Fehlersuche hat zum Teil mehr Zeit beansprucht als geplant.                                     |
+| Dokumentation               | 3               | 3                            |       |                                                                                                 |
+| Präsentation                | 2               |                              |       |                                                                                                 |
+| Reserve                     | 2               |                              |       |                                                                                                 |
 
 ## Kontext Map
 
-Nach Analyse der Situation undf Ausgangslage hat sich folgende Kontext Map ergeben:
+Nach Analyse der Situation und Ausgangslage hat sich folgende Kontext Map ergeben:
 
 ![Kontext Map](/doc/Context_Map.png)
 
-# Kontext Diagramm
+Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen erstellt, welche dann mit Tags versehen werden können.
+
+Die Tags werden jeweils den Informationen zugeordnet. Die Informationen einem Projekt.
+
+## Kontext Diagramm
 
 Aus der Kontext Map konnte auch das Kontext Diagramm erstellt werden:
 
 ![Kontext Diagramm](/doc/Kontextdiagramm.png)
 
+Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen angelegt, welche mit Tags versehen werden können. Nach den Informationen kann dann gesucht werden und die Projektinformation wird ausgegeben.
+
 ## Kommunikationsdiagramm
 
-Um den Ablauf noch etwas genauer zu verstehen, haben wir auch noch ein Kommunikationsdiagramm erstellt:
+Im Kommunikationsdiagramm wird die Informationserstellung erläutert:
 
 ![Kommunikationsdiagramm](/doc/Kommunikationsdiagramm.png)
 
+Der Projektleiter legt das Projekt an. Anschliessend werden die Projektinformationen angelegt, welche dann wiederum ausgegeben werden bei einer Suche.
+
 ## Klassendiagramm
 
-Anschliessend hatten wir ein genug grosses Verständniss vom Projekt um die Klassen definieren zu können:
+Anschliessend hatten wir ein genug grosses Verständnis vom Projekt, um die Klassen definieren zu können:
 
 ![Klassendiagramm](/doc/Classdiagram.png)
 
@@ -66,6 +74,10 @@ Anschliessend hatten wir ein genug grosses Verständniss vom Projekt um die Klas
 In unserem Projekt haben sich folgende Anforderungen und Risiken ergeben:
 
 ![Testfälle](/doc/Anforderungen.png)
+
+Das grösste Risiko für unser Projekt wäre, wenn Informationen zum Projekt nicht gespeichert würden.
+Dies wäre kritisch, da somit Informationen verloren gehen würden.
+Wenn eine Information zwar erstellt wurde, jedoch dem falschen Projekt zugeteilt wird, wäre dies nicht schön, jedoch auch nicht tragisch, da diese im Nachhinein noch dem korrekten Projekt zugeteilt werden könnte.
 
 ## Testfälle
 
@@ -86,10 +98,22 @@ Dabei haben wir uns für drei Tabs entschieden:
 - Informationserstellung
 - Suchen/Kommentieren
 
-Anschliessend wurden die Klassen anhand des Klassendiagramms geschrieben.
-Damit hatten wir bereits einen soliden Aufbau des Projekts.
+Unter Projekterstellung kann ein neues Projekt mit Name, Kunde, Projektleiter und Kernanforderung erstellt werden.
+In der Informationserstellung kann das Projekt ausgewählt werden und dazu eine Information mit Text, Bild (URL), andere Dokumente (URL) und Tags angelegt werden.
+Sobald ein neues Projekt erstellt wird, werden sämtliche Felder geleert für die Erstellung des nächsten Projekts.
+Es erscheint jeweils auch eine Meldung, dass das Projekt erfolgreich gespeichert wurde.
 
-Nach den Klassen haben wir uns gedanken gemacht, welche Funktionen alles benötigt werden. Dabei haben wir folgende Funktionen erstellt:
+In der Suche/Kommentieren können die Informationen zu den einzelnen Projekten gesucht werden.
+Die Informationen werden im Feld Projektinformationen ausgegeben.
+Es kann auch nach einzelnen Tags gesucht werden. Bei einer Suche nach Tags werden nur noch diese Informationen ausgegeben, welche auch dieses Tag enthalten.
+
+Einzelne Informationen können auch kommentiert werden. Der Kommentar erscheint dann unter der Information separat aufgelistet.
+
+Sämtliche Daten werden in die Datei `C:\Temp\projects.dat` gespeichert. Dazu muss der `C:\Temp` Ordner bereits existieren.
+
+Die Klassen wurden anhand des Klassendiagramms geschrieben (siehe Klassendiagramm).
+
+Zusätzliche zu den projektspezifischen Klassen haben wir noch einige Funktionen erstellt, um die WissensmanagementApp zu verwalten. Dabei haben wir folgende Funktionen erstellt:
 
 - NeuesProjektErstellen
 - NeueInformationHinzufuegen
@@ -97,4 +121,12 @@ Nach den Klassen haben wir uns gedanken gemacht, welche Funktionen alles benöti
 - Speichern
 - Laden
 
-Mit diesen Funktionen können wir alle Funktionen unseres Wissensmanagement abbilden.
+Mit diesen Funktionen konnten wir alle Funktionen unseres Wissensmanagement abbilden.
+
+## Fazit
+
+Das Projekt zur Entwicklung eines Wissensmanagementsystems war insgesamt erfolgreich und sehr lehrreich. Die Anwendung der im Unterricht behandelten Konzepte, darunter die Erstellung von Diagrammen wie Kontext-, Kommunikations- und Klassendiagrammen konnten anhand eines praktischen Beispiels angewandt werden. Dies war sehr nützlich zur Festigung des gelernten Schulinhaltes.
+
+Während der Entwicklung zeigte sich, dass einige Tätigkeiten, insbesondere die Programmierung und das Testen, mehr Zeit in Anspruch nahmen als ursprünglich eingeplant. Dies verdeutlicht die Herausforderungen in der Softwareentwicklung, insbesondere in der Fehleranalyse und Behebung. Dennoch konnten alle wesentlichen Funktionen erfolgreich umgesetzt werden.
+
+Insgesamt war das Projekt eine coole Erfahrung, die Spass gemacht hat und einen praktischen Bezug zur Theorie herstellte.
