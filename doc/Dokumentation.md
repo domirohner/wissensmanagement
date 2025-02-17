@@ -21,21 +21,21 @@ Durch die Möglichkeit, nach Tags zu suchen, wird das Finden relevanter Informat
 Zu Beginnn unseres Projektes haben wir alle Tätigkeiten aufgelistet und die dafür benötigte Zeit geschätzt.
 In der nachfolgenden Tabelle sind alle geschätzten und effektiv geleisteten Stunden ersichtlich:
 
-| Aktivität                   | Stunden geplannt | Stunden geleistet (zusammen) | Delta | Erklärung                                                   |
-| --------------------------- | ---------------- | ---------------------------- | ----- | ----------------------------------------------------------- |
-| Initialisierung und Planung | 1                | 1                            |       |                                                             |
-| Context Map                 | 1                | 0.5                          |       |                                                             |
-| Anforderungsanalyse         | 1                | 1                            |       |                                                             |
-| Risikoanalyse               | 1                | 0.5                          |       |                                                             |
-| Kontextdiagramm             | 1                | 0.5                          |       |                                                             |
-| Kommunikationsdiagramm      | 1                | 0.75                         |       |                                                             |
-| Klassendiagramm             | 1                | 1                            |       |                                                             |
-| Testplan                    | 1                | 1                            |       |                                                             |
-| Unit-tests                  | 2                |                              |       |                                                             |
-| Programmierung              | 5                | 7                            | 2     | Fehlersuche hat zum Teil mehr Zeit beansprucht als gedacht. |
-| Dokumentation               | 3                |                              |       |                                                             |
-| Präsentation                | 2                |                              |       |                                                             |
-| Reserve                     | 2                |                              |       |                                                             |
+| Aktivität                   | Stunden geplannt | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                       |
+| --------------------------- | ---------------- | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
+| Initialisierung und Planung | 1                | 1                            |       |                                                                                                 |
+| Kontext Map                 | 1                | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.             |
+| Anforderungsanalyse         | 1                | 1                            |       |                                                                                                 |
+| Risikoanalyse               | 1                | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                       |
+| Kontextdiagramm             | 1                | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                        |
+| Kommunikationsdiagramm      | 1                | 0.75                         | 0.25  |                                                                                                 |
+| Klassendiagramm             | 1                | 1                            |       |                                                                                                 |
+| Testplan                    | 1                | 1                            |       |                                                                                                 |
+| Unit-tests                  | 2                | 3                            | 1     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht. |
+| Programmierung              | 5                | 7                            | 2     | Fehlersuche hat zum Teil mehr Zeit beansprucht als geplant.                                     |
+| Dokumentation               | 3                | 3                            |       |                                                                                                 |
+| Präsentation                | 2                |                              |       |                                                                                                 |
+| Reserve                     | 2                |                              |       |                                                                                                 |
 
 ## Kontext Map
 
@@ -63,11 +63,9 @@ Anschliessend hatten wir ein genug grosses Verständniss vom Projekt um die Klas
 
 ## Anforderungsanalyse
 
-Zudem wurden alle Anforderungen aufgelistet.
-
 In unserem Projekt haben sich folgende Anforderungen und Risiken ergeben:
 
-TODO
+![Testfälle](/doc/Anforderungen.png)
 
 ## Testfälle
 
@@ -82,6 +80,12 @@ In unserer Applikation haben wir zuerst das UI mit Windows Forms erstellt:
 
 ![UI](/doc/UI.png)
 
+Dabei haben wir uns für drei Tabs entschieden:
+
+- Projekterstellung
+- Informationserstellung
+- Suchen/Kommentieren
+
 Anschliessend wurden die Klassen anhand des Klassendiagramms geschrieben.
 Damit hatten wir bereits einen soliden Aufbau des Projekts.
 
@@ -92,3 +96,5 @@ Nach den Klassen haben wir uns gedanken gemacht, welche Funktionen alles benöti
 - InformationenSuchen
 - Speichern
 - Laden
+
+Mit diesen Funktionen können wir alle Funktionen unseres Wissensmanagement abbilden.
