@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Wissensmanagement\\Program.cs",
               "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Program.cs",
               "RelativeToolTip": "Wissensmanagement\\Program.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAADwv8MAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAAH4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-27T18:38:24.163Z",
               "EditorCaption": ""
@@ -45,9 +45,10 @@
               "RelativeDocumentMoniker": "Wissensmanagement\\Form1.Designer.cs",
               "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.Designer.cs",
               "RelativeToolTip": "Wissensmanagement\\Form1.Designer.cs",
-              "ViewState": "AgIAAOgBAAAAAAAAAAAqwPkBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFUBAAAAAAAAAAAqwPkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T12:14:54.254Z"
+              "WhenOpened": "2025-01-23T12:14:54.254Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -58,7 +59,8 @@
               "ToolTip": "C:\\Users\\domin\\Repos\\wissensmanagement\\src\\Wissensmanagement\\Wissensmanagement\\Form1.cs [Design]",
               "RelativeToolTip": "Wissensmanagement\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T19:18:06.871Z"
+              "WhenOpened": "2025-01-20T19:18:06.871Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

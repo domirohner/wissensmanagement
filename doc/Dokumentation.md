@@ -65,9 +65,28 @@ Der Projektleiter legt das Projekt an. Anschliessend werden die Projektinformati
 
 ## Klassendiagramm
 
-Anschliessend hatten wir ein genug grosses Verständnis vom Projekt, um die Klassen definieren zu können:
+Anschliessend hatten wir ein genug grosses Verständnis vom Projekt, um die Klassen definieren zu können.
+In einem ersten Entwurf haben wir unsere Klassen wie folgt definiert:
 
-![Klassendiagramm](/doc/Classdiagram.png)
+![Klassendiagramm Alt](/doc/Classdiagram.png)
+
+Während der Programmierung haben wir das Klassendiagramm anpassen müssen, da es nicht alle von unseren Anforderungen erfüllt hat.
+Das finale Klassendiagramm sieht wie folgt aus:
+
+![Klassendiagramm Neu](/doc/Classdiagram_New.png)
+
+Im finalen Klassendiagramm haben wir vier Klassen:
+
+- Tag
+- Info
+- Projekt
+- WissensmanagementApp
+
+Die Klasse WissensmanagementApp haben wir in einem zweiten Schritt hinzugefügt,
+da wir einige Funktionen benötigten um die Anforderungen an unser Wissensmanagement zu erfüllen.
+
+Bei der Klasse Info haben wir zu Beginn vergessen, dass auch Kommentare zu Information gemacht werden können.
+Deshalb haben wir diese noch zur Klasse hinzugefügt.
 
 ## Anforderungsanalyse
 
