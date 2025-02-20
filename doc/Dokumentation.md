@@ -153,10 +153,21 @@ Zusätzliche zu den projektspezifischen Klassen haben wir noch einige Funktionen
 
 Mit diesen Funktionen konnten wir alle Funktionen unseres Wissensmanagement abbilden.
 
+Wir haben kein Usermanagement implementiert, da wir die Sicherheit für das Abspeichern der Passwörter der Benutzer nicht hätten sicherstellen können.
+Deshalb wird aktuell nicht unterschieden von Projektleiter und Projektmitarbeiter.
+Es wird in unserer Applikation davon ausgegangen, dass die Benutzer vor dem Zugriff auf die Applikation authentisiert werden und anschliessend nur Zugriff auf die ensprechenden Bereiche haben.
+
 ## Fazit
 
-Das Projekt zur Entwicklung eines Wissensmanagementsystems war insgesamt erfolgreich und sehr lehrreich. Die Anwendung der im Unterricht behandelten Konzepte, darunter die Erstellung von Diagrammen wie Kontext-, Kommunikations- und Klassendiagrammen konnten anhand eines praktischen Beispiels angewandt werden. Dies war sehr nützlich zur Festigung des gelernten Schulinhaltes.
+Das Projekt zur Entwicklung eines Wissensmanagementsystems war insgesamt erfolgreich und sehr lehrreich.
+Die Anwendung der im Unterricht behandelten Konzepte, darunter die Erstellung von Diagrammen wie Kontext-, Kommunikations- und Klassendiagrammen konnten anhand eines praktischen Beispiels angewandt werden.
+Dies war sehr nützlich zur Festigung des gelernten Schulinhaltes.
 
-Während der Entwicklung zeigte sich, dass einige Tätigkeiten, insbesondere die Programmierung und das Testen, mehr Zeit in Anspruch nahmen als ursprünglich eingeplant. Dies verdeutlicht die Herausforderungen in der Softwareentwicklung, insbesondere in der Fehleranalyse und Behebung. Dennoch konnten alle wesentlichen Funktionen erfolgreich umgesetzt werden.
+Während der Entwicklung zeigte sich, dass einige Tätigkeiten, insbesondere die Programmierung und das Testen, mehr Zeit in Anspruch nahmen als ursprünglich eingeplant.
+Dies verdeutlicht die Herausforderungen in der Softwareentwicklung, insbesondere in der Fehleranalyse und Behebung.
+Dennoch konnten alle wesentlichen Funktionen erfolgreich umgesetzt werden.
+
+Wir haben auch bemerkt, dass das gemeinsame Arbeiten an einem Projekt zum Teil schwierig war, damit nicht die Änderung des Kollegen überschrieben werden.
+Zudem hat sich im Laufe des Projekts ein Mix zwischen Englisch und Deutsch in unserm Code abgezeichnet.
 
 Insgesamt war das Projekt eine coole Erfahrung, die Spass gemacht hat und einen praktischen Bezug zur Theorie herstellte.
