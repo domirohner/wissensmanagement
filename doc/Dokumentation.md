@@ -70,6 +70,17 @@ In einem ersten Entwurf haben wir unsere Klassen wie folgt definiert:
 
 ![Klassendiagramm Alt](/doc/Classdiagram.png)
 
+Wir benötigen drei Klassen:
+
+- Tag
+- Info
+- Projekt
+
+Ein Projekt beinhaltet Informationen. Die Informationen wiederum enthalten Tags.
+Nach diesen kann bei einer Suche gesucht werden.
+
+Zum Projekt gehört ein Titel, ein Datum, Informationen und Tags.
+
 Während der Programmierung haben wir das Klassendiagramm anpassen müssen, da es nicht alle von unseren Anforderungen erfüllt hat.
 Das finale Klassendiagramm sieht wie folgt aus:
 
