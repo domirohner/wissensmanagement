@@ -21,21 +21,20 @@ Durch die Möglichkeit, nach Tags zu suchen, wird das Finden relevanter Informat
 Zu Beginn unseres Projektes haben wir alle Tätigkeiten aufgelistet und die dafür benötigte Zeit geschätzt.
 In der nachfolgenden Tabelle sind alle geschätzten und effektiv geleisteten Stunden ersichtlich:
 
-| Aktivität                   | Stunden geplant | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                       |
-| --------------------------- | --------------- | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------- |
-| Initialisierung und Planung | 1               | 1                            |       |                                                                                                 |
-| Kontext Map                 | 1               | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.             |
-| Anforderungsanalyse         | 1               | 1                            |       |                                                                                                 |
-| Risikoanalyse               | 1               | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                       |
-| Kontextdiagramm             | 1               | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                        |
-| Kommunikationsdiagramm      | 1               | 0.75                         | 0.25  |                                                                                                 |
-| Klassendiagramm             | 1               | 1                            |       |                                                                                                 |
-| Testplan                    | 1               | 1                            |       |                                                                                                 |
-| Unit-tests                  | 2               | 3                            | 1     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht. |
-| Programmierung              | 5               | 7                            | 2     | Fehlersuche hat zum Teil mehr Zeit beansprucht als geplant.                                     |
-| Dokumentation               | 3               | 3                            |       |                                                                                                 |
-| Präsentation                | 2               |                              |       |                                                                                                 |
-| Reserve                     | 2               |                              |       |                                                                                                 |
+| Aktivität                   | Stunden geplant | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                                                              |
+| --------------------------- | --------------- | ---------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Initialisierung und Planung | 1               | 1                            |       |                                                                                                                                        |
+| Kontext Map                 | 1               | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.                                                    |
+| Anforderungsanalyse         | 1               | 1                            |       |                                                                                                                                        |
+| Risikoanalyse               | 1               | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                                                              |
+| Kontextdiagramm             | 1               | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                                                               |
+| Kommunikationsdiagramm      | 1               | 0.75                         | 0.25  |                                                                                                                                        |
+| Klassendiagramm             | 1               | 1                            |       |                                                                                                                                        |
+| Testplan                    | 1               | 1                            |       |                                                                                                                                        |
+| Unit-tests                  | 2               | 3                            | 1     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht.                                        |
+| Programmierung              | 6               | 8                            | 2     | Wir mussten uns zuerst anschuen wie ein UI erstellt werden kann. Zudem hat die Fehlersuche zum Teil mehr Zeit beansprucht als geplant. |
+| Dokumentation               | 3               | 3                            |       |                                                                                                                                        |
+| Präsentation                | 2               | 2                            |       |                                                                                                                                        |
 
 ## Kontext Map
 
@@ -55,6 +54,12 @@ Aus der Kontext Map konnte auch das Kontext Diagramm erstellt werden:
 
 Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen angelegt, welche mit Tags versehen werden können. Nach den Informationen kann dann gesucht werden und die Projektinformation wird ausgegeben.
 
+## Use Case Diagramm
+
+Im Use Case Diagram wird der Ablauf bei der Erstellung eines neuen Projekts gezeigt.
+
+![Use Case Diagramm](/doc/UseCaseDiagramm.png)
+
 ## Kommunikationsdiagramm
 
 Im Kommunikationsdiagramm wird die Informationserstellung erläutert:
@@ -62,6 +67,12 @@ Im Kommunikationsdiagramm wird die Informationserstellung erläutert:
 ![Kommunikationsdiagramm](/doc/Kommunikationsdiagramm.png)
 
 Der Projektleiter legt das Projekt an. Anschliessend werden die Projektinformationen angelegt, welche dann wiederum ausgegeben werden bei einer Suche.
+
+## Zustandsdiagramm
+
+Im Zustandsdiagramm wird der Zustand des Projekts erläutert:
+
+![Zustandsdiagramm](/doc/Zustandsdiagramm.png)
 
 ## Klassendiagramm
 
