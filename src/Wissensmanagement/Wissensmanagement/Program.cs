@@ -57,7 +57,7 @@ namespace Wissensmanagement
         {
             if (comments == null)
             {
-                comments = new List<string>();  // Sicherstellen, dass die Liste existiert
+                comments = new List<string>();
             }
             comments.Add(comment);
         }
@@ -127,8 +127,16 @@ namespace Wissensmanagement
     public class WissensmanagementApp
     {
         private List<Project> projects = new List<Project>();
+        public bool IsTestMode { get; set; } = false;
+
+        private string SpeicherDatei;
+
         // Definition Speicherort (es muss ein C:\Temp existieren)
-        private static readonly string SpeicherDatei = "C:\\Temp\\projects.dat";
+        // Dadurch kann der Speicherort spezifiziert werden
+        public WissensmanagementApp(string speicherDatei = "C:\\Temp\\projects.dat")
+        {
+            SpeicherDatei = speicherDatei;
+        }
 
         // Erstellung neues Projekt
         public void NeuesProjektErstellen(string projektName)
@@ -136,7 +144,10 @@ namespace Wissensmanagement
             var projekt = new Project(projektName);
             projects.Add(projekt);
             Speichern();
-            MessageBox.Show("Projekt erfolgreich erstellt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!IsTestMode)
+            {
+                MessageBox.Show("Projekt erfolgreich erstellt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         public List<Project> GetProjects()
@@ -150,14 +161,20 @@ namespace Wissensmanagement
             // Fehler ausgeben wenn Projekt nicht gefunden wird
             if (projekt == null)
             {
-                MessageBox.Show("Projekt nicht gefunden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!IsTestMode)
+                {
+                    MessageBox.Show("Projekt nicht gefunden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return;
             }
             var info = new Info(title, text, date, tags);
             // Info hinzufügen
             projekt.addInfo(info);
             Speichern();
-            MessageBox.Show("Information erfolgreich hinzugefügt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (!IsTestMode)
+            {
+                MessageBox.Show("Information erfolgreich hinzugefügt!", "Erfolg", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         // Information suchen
         public void InformationenSuchen()
@@ -260,7 +277,7 @@ namespace Wissensmanagement
 
             UpdateComboBox();
         }
-        // Klickem des Information hinzufügen Button
+        // Klicken des Information hinzufügen Button
         private void information_hinzufuegen_btn_Click(object sender, EventArgs e)
         {
             // Gib Fehlermeldung aus wenn kein Projekt gewählt ist
@@ -269,7 +286,7 @@ namespace Wissensmanagement
                 MessageBox.Show("Bitte ein Projekt auswählen.", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            // Erhalte werde des Projekts
+            // Erhalte Werte des Projekts
             string projektname = project_cb.SelectedItem.ToString();
             string title = information_text_tb.Text.Length > 10 ? information_text_tb.Text.Substring(0, 10) : information_text_tb.Text;
             string text = $"Text: {information_text_tb.Text}\nBild: {information_bilder_tb.Text}\nDokument: {information_dokumente_tb.Text}";

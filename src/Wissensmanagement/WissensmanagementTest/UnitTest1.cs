@@ -13,7 +13,8 @@ namespace Wissensmanagement.Tests
         [TestInitialize]
         public void Setup()
         {
-            app = new WissensmanagementApp();
+            // Verwenden einer anderen Datei für Tests
+            app = new WissensmanagementApp("C:\\Temp\\testprojects.dat") { IsTestMode = true };
         }
 
         [TestMethod]
