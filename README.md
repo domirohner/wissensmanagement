@@ -1,5 +1,7 @@
 # Wissensmanagement
 
-Projekt von Marcel Borter und Dominic Rohner
+Projekt von Dominic Rohner und Marcel Borter
 
-Dokumentation ist unter `/doc` zu finden.
+Dokumentation ist [hier](/doc/Dokumentation.md) zu finden.
+
+Applikation und Tests sind unter [src](/src) zu finden.
