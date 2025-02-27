@@ -128,7 +128,8 @@ namespace Wissensmanagement
     {
         private List<Project> projects = new List<Project>();
         // Definition Speicherort (es muss ein C:\Temp existieren)
-        private const string SpeicherDatei = "C:\\Temp\\projects.dat";
+        private static readonly string SpeicherDatei = "C:\\Temp\\projects.dat";
+
         // Erstellung neues Projekt
         public void NeuesProjektErstellen(string projektName)
         {
