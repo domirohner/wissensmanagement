@@ -139,5 +139,46 @@ namespace Wissensmanagement.Tests
                 Assert.IsTrue(project.getProjectInfo().Any(info => info.tags.Any(t => t.tag_Name == tag.tag_Name)));
             }
         }
+
+        [TestMethod]
+        public void Test_ProjekteMitDetailsWerdenGespeichert()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                string projektname = $"Projekt {i}";
+                string kunde = $"Kunde {i}";
+                string projektleiter = $"Projektleiter {i}";
+                string kernanforderung = $"Kernanforderung {i}";
+
+                app.NeuesProjektErstellen(projektname);
+                var projekt = app.GetProjects().FirstOrDefault(p => p.getProjectName() == projektname);
+                Assert.IsNotNull(projekt);
+
+                projekt.addInfo(new Info("Projektinfo", $"Kunde: {kunde}\nProjektleiter: {projektleiter}\nKernanforderung: {kernanforderung}", DateTime.Now.ToString("yyyy-MM-dd"), new List<Tag>()));
+            }
+
+            var projects = app.GetProjects();
+            Assert.AreEqual(5, projects.Count);
+        }
+
+        [TestMethod]
+        public void Test_ProjekteEnthaltenKundeProjektleiterKernanforderung()
+        {
+            app.NeuesProjektErstellen("Projekt X");
+            string kunde = "Kunde X";
+            string projektleiter = "Projektleiter X";
+            string kernanforderung = "Kernanforderung X";
+
+            var projekt = app.GetProjects().FirstOrDefault(p => p.getProjectName() == "Projekt X");
+            Assert.IsNotNull(projekt);
+
+            projekt.addInfo(new Info("Projektinfo", $"Kunde: {kunde}\nProjektleiter: {projektleiter}\nKernanforderung: {kernanforderung}", DateTime.Now.ToString("yyyy-MM-dd"), new List<Tag>()));
+
+            var info = projekt.getProjectInfo().FirstOrDefault();
+            Assert.IsNotNull(info);
+            Assert.IsTrue(info.getText().Contains($"Kunde: {kunde}"));
+            Assert.IsTrue(info.getText().Contains($"Projektleiter: {projektleiter}"));
+            Assert.IsTrue(info.getText().Contains($"Kernanforderung: {kernanforderung}"));
+        }
     }
 }
