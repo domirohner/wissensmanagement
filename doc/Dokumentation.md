@@ -1,11 +1,5 @@
 # Wissensmanagement
 
-Projekt von Marcel Borter und Dominic Rohner
-
-Fach: Lösungsalgorithmen
-
-Dozent: Christian Herren
-
 ## Situationsanalyse
 
 Die IT-Firma Xarelto möchte ein Wissensmanagementsystem einführen, um die Effizienz und den Wissensaustausch in Projekten zu verbessern.
@@ -21,26 +15,13 @@ Durch die Möglichkeit, nach Tags zu suchen, wird das Finden relevanter Informat
 Zu Beginn unseres Projektes haben wir alle Tätigkeiten aufgelistet und die dafür benötigte Zeit geschätzt.
 In der nachfolgenden Tabelle sind alle geschätzten und effektiv geleisteten Stunden ersichtlich:
 
-| Aktivität                   | Stunden geplant | Stunden geleistet (zusammen) | Delta | Erklärung                                                                                                                                                               |
-| --------------------------- | --------------- | ---------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Initialisierung und Planung | 1               | 1                            |       |                                                                                                                                                                         |
-| Kontext Map                 | 1               | 0.5                          | 0.5   | Gab weniger zu tun, da wir die Anforderungen an das Projekt bereits gut verstanden.                                                                                     |
-| Anforderungsanalyse         | 1               | 1                            |       |                                                                                                                                                                         |
-| Risikoanalyse               | 1               | 0.5                          | 0.5   | Risiken wurden bereits in Anforderungsanalyse besprochen.                                                                                                               |
-| Kontextdiagramm             | 1               | 0.5                          | 0.5   | Kontextdiagramm konnte an Kontekt Map abgeleitet werden.                                                                                                                |
-| Kommunikationsdiagramm      | 1               | 0.75                         | 0.25  |                                                                                                                                                                         |
-| Klassendiagramm             | 1               | 1                            |       |                                                                                                                                                                         |
-| Testplan                    | 1               | 1.5                          | 0.5   | Der Testplan musste nochmals angepasst werden.                                                                                                                          |
-| Unit-tests                  | 2               | 4                            | 2     | Es tauchten einige Fehler auf beim Schreiben der Tests welche mehr Zeit benötigten als gedacht. Zudem hatten wir zu Beginn Probleme mit dem Erstellen des Testprojekts. |
-| Programmierung              | 6               | 8                            | 2     | Wir mussten uns zuerst anschuen wie ein UI erstellt werden kann. Zudem hat die Fehlersuche zum Teil mehr Zeit beansprucht als geplant.                                  |
-| Dokumentation               | 3               | 3                            |       |                                                                                                                                                                         |
-| Präsentation                | 2               | 2                            |       |                                                                                                                                                                         |
+![Zeitplan](Zeitplan.png)
 
 ## Kontext Map
 
 Nach Analyse der Situation und Ausgangslage hat sich folgende Kontext Map ergeben:
 
-![Kontext Map](/doc/Context_Map.png)
+![Kontext Map](Context_Map.png)
 
 Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen erstellt, welche dann mit Tags versehen werden können.
 
@@ -50,7 +31,7 @@ Die Tags werden jeweils den Informationen zugeordnet. Die Informationen einem Pr
 
 Aus der Kontext Map konnte auch das Kontext Diagramm erstellt werden:
 
-![Kontext Diagramm](/doc/Kontextdiagramm.png)
+![Kontext Diagramm](Kontextdiagramm.png)
 
 Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen angelegt, welche mit Tags versehen werden können. Nach den Informationen kann dann gesucht werden und die Projektinformation wird ausgegeben.
 
@@ -58,13 +39,13 @@ Der Projektleiter erstellt ein Projekt, anschliessend werden Informationen angel
 
 Im Use Case Diagram wird der Ablauf bei der Erstellung eines neuen Projekts gezeigt.
 
-![Use Case Diagramm](/doc/UseCaseDiagramm.png)
+![Use Case Diagramm](UseCaseDiagramm.png)
 
 ## Kommunikationsdiagramm
 
 Im Kommunikationsdiagramm wird die Informationserstellung erläutert:
 
-![Kommunikationsdiagramm](/doc/Kommunikationsdiagramm.png)
+![Kommunikationsdiagramm](Kommunikationsdiagramm.png)
 
 Der Projektleiter legt das Projekt an. Anschliessend werden die Projektinformationen angelegt, welche dann wiederum ausgegeben werden bei einer Suche.
 
@@ -72,14 +53,14 @@ Der Projektleiter legt das Projekt an. Anschliessend werden die Projektinformati
 
 Im Zustandsdiagramm wird der Zustand des Projekts erläutert:
 
-![Zustandsdiagramm](/doc/Zustandsdiagramm.png)
+![Zustandsdiagramm](Zustandsdiagramm.png)
 
 ## Klassendiagramm
 
 Anschliessend hatten wir ein genug grosses Verständnis vom Projekt, um die Klassen definieren zu können.
 In einem ersten Entwurf haben wir unsere Klassen wie folgt definiert:
 
-![Klassendiagramm Alt](/doc/Classdiagram.png)
+![Klassendiagramm Alt](Classdiagram.png)
 
 Wir benötigen drei Klassen:
 
@@ -95,7 +76,7 @@ Zum Projekt gehört ein Titel, ein Datum, Informationen und Tags.
 Während der Programmierung haben wir das Klassendiagramm anpassen müssen, da es nicht alle von unseren Anforderungen erfüllt hat.
 Das finale Klassendiagramm sieht wie folgt aus:
 
-![Klassendiagramm Neu](/doc/Classdiagram_New.png)
+![Klassendiagramm Neu](Classdiagram_New.png)
 
 Im finalen Klassendiagramm haben wir vier Klassen:
 
@@ -114,7 +95,7 @@ Deshalb haben wir diese noch zur Klasse hinzugefügt.
 
 In unserem Projekt haben sich folgende Anforderungen und Risiken ergeben:
 
-![Testfälle](/doc/Anforderungen.png)
+![Testfälle](Anforderungen.png)
 
 Das grösste Risiko für unser Projekt wäre, wenn Informationen zum Projekt nicht gespeichert würden.
 Dies wäre kritisch, da somit Informationen verloren gehen würden.
@@ -124,13 +105,13 @@ Wenn eine Information zwar erstellt wurde, jedoch dem falschen Projekt zugeteilt
 
 Folgende Testfälle wurden definiert und abgearbeitet:
 
-![Testfälle](/doc/Testfaelle.png)
+![Testfälle](Testfaelle.png)
 
 ## Realisation
 
 In unserer Applikation haben wir zuerst das UI mit Windows Forms erstellt:
 
-![UI](/doc/UI.png)
+![UI](UI.png)
 
 Dabei haben wir uns für drei Tabs entschieden:
 
